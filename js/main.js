@@ -1,10 +1,8 @@
 
 // SIMULADOR INTERACTIVO DE PRESUPUESTO PC GAMER
 // Preguntar el nombre y darle la bienvenida
-let nombre = prompt("Ingrese su nombre");
-alert("Hola " + nombre + " bienvenido a CompuNet, tu presupuesto de PC ideal! ");
-
-
+    let nombre = prompt("Ingrese su nombre");
+    alert("Hola " + nombre + ", bienvenido a CompuNet, tu presupuesto de PC ideal!");
 
 // Solicitar al usuario si prefiere AMD o Intel
 let marcaProcesador = prompt(nombre + " Empezemos por la placa de video ¿Preferis AMD o Intel?");
@@ -41,12 +39,10 @@ while (procesadorElegido != 1 && procesadorElegido != 2 && procesadorElegido != 
 
 
 //Mostrar opciones de placas de video
-function elegirPlacaDeVideo();{
+
 let placaVideoElegida = (prompt("Elige una placa de video:\n1. Nvidia GTX 1660 ($160.489)\n2. Nvidia RTX 3070 ($415.514)\n3. AMD Radeon RX 6800 ($609900)"));
 while (placaVideoElegida != 1 && placaVideoElegida != 2 && placaVideoElegida != 3) {
     placaVideoElegida = prompt("Elige una placa de video:\n1. Nvidia GTX 1660 ($160.489)\n2. Nvidia RTX 3070 ($415.514)\n3. AMD Radeon RX 6800 ($609900)");
-}
-return placaVideoElegida;
 }
 
 //Mostrar opciones de Tarjeta Madre
@@ -63,11 +59,11 @@ while (memoriaRamElegida != 1 && memoriaRamElegida != 2) {
 }
 
 //Mostrar opciones de Disco Solidos
+
 let discoSolidoElegida = prompt("Elige un disco solido:\n1. 500GB Kingston($24.662)\n2. 1tb Kingston($34.000)");
 while (discoSolidoElegida != 1 && discoSolidoElegida != 2) {
     discoSolidoElegida = prompt("Elige un disco solido:\n1. 500GB Kingston($24.662)\n2. 1tb Kingston($34.000)");
 }
-
 
 
 //Calcular costo total de los componentes elegidos
@@ -106,14 +102,14 @@ console.log(costoTotal);
 // Calcular el costo de la tarjeta madre
 if (tarjetaMadreElegida === "1") {
     costoTotal += 84999; //  Precio Asus A320m-k Amd A320
-} else (tarjetaMadreElegida === "2"); {
+} else (tarjetaMadreElegida === "2");{
     costoTotal += 146041; // Precio Gigabyte H610m-s2h Ddr4
 }
 
 // Calcular el costo de la Memoria Ram
 if (memoriaRamElegida === "1") {
     costoTotal += 21714; // Precio RAM Fury Beast 8GB 1 Kingston
-} else (memoriaRamElegida === "2"); {
+} else (memoriaRamElegida === "2");{
     costoTotal += 30199; // RAM Crucial 16GB
 }
 console.log(costoTotal);
@@ -128,7 +124,7 @@ console.log(costoTotal);
 //Aplicar descuento si es cliente
 let esCliente = prompt("¿Eres cliente? \n1.Si \n2.No ");
 
-if (esCliente === 1) {
+if (esCliente == 1) {
     costoTotal *= 0.9; // Aplicar descuento del 10%
 }
 
