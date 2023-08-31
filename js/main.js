@@ -1,9 +1,9 @@
 
 // SIMULADOR INTERACTIVO DE PRESUPUESTO PC GAMER
 // Preguntar el nombre y darle la bienvenida
-function saludar(){
 let nombre = prompt("Ingrese su nombre");
-alert("Hola " + nombre + " bienvenido a CompuNet, tu presupuesto de PC ideal! ");}
+alert("Hola " + nombre + " bienvenido a CompuNet, tu presupuesto de PC ideal! ");
+
 
 
 // Solicitar al usuario si prefiere AMD o Intel
@@ -18,6 +18,7 @@ while (marcaProcesador != "amd" && marcaProcesador != "intel") {
     } 
 
 //Mostrar opciones de procesadores según la marca elegida
+
 let procesadorElegido;
 if (marcaProcesador === "amd") {
     procesadorElegido = prompt("Elige un procesador AMD:\n1. AMD Ryzen 5 4600g 8mb 3.7ghz ($124.158)\n2.AMD Ryzen 7 5700g 8 Núcleos 4.6ghz ($234.818) \n3. AMD Ryzen 9 7950X3D 16 núcleos y 5.7GHz ($929.000)");
@@ -40,9 +41,12 @@ while (procesadorElegido != 1 && procesadorElegido != 2 && procesadorElegido != 
 
 
 //Mostrar opciones de placas de video
+function elegirPlacaDeVideo();{
 let placaVideoElegida = (prompt("Elige una placa de video:\n1. Nvidia GTX 1660 ($160.489)\n2. Nvidia RTX 3070 ($415.514)\n3. AMD Radeon RX 6800 ($609900)"));
 while (placaVideoElegida != 1 && placaVideoElegida != 2 && placaVideoElegida != 3) {
     placaVideoElegida = prompt("Elige una placa de video:\n1. Nvidia GTX 1660 ($160.489)\n2. Nvidia RTX 3070 ($415.514)\n3. AMD Radeon RX 6800 ($609900)");
+}
+return placaVideoElegida;
 }
 
 //Mostrar opciones de Tarjeta Madre
